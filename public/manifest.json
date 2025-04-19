@@ -4,7 +4,7 @@
   "author": "Your Name",
   "description": "Sync Trello cards to Habitica tasks",
   "version": "1.0",
-  "detailsUrl": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/",
+  "detailsUrl": "https://Bunny-Burrow.github.io/Habitica-Trello/",
   "icon": "https://habitica.com/favicon.ico",
   "capabilities": ["card-buttons"],
   "connectors": {
