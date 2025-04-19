@@ -1,5 +1,5 @@
 window.TrelloPowerUp.initialize({
-  appKey: 'YOUR_TRELLO_APP_KEY', // Get from https://trello.com/app-key
+  appKey: 'TRELLO_APP_KEY', // Get from https://trello.com/app-key
   appName: 'Habitica Sync',
 
   'card-buttons': (t) => [{
@@ -17,7 +17,7 @@ window.TrelloPowerUp.initialize({
 
 async function triggerGitHubSync(card) {
   const response = await fetch(
-    'https://api.github.com/repos/YOUR_GITHUB_USERNAME/YOUR_REPO/dispatches',
+    'https://api.github.com/repos/Bunny-Burrow/Habitica-Trello/dispatches',
     {
       method: 'POST',
       headers: {
