@@ -4,7 +4,7 @@
 /* globals TrelloPowerUp */
 
 const t = TrelloPowerUp.iframe();
-
+console.log("Trello Power-Up Loaded");
 window.TrelloPowerUp.initialize({
   'card-buttons': function (t, options) {
     return [
