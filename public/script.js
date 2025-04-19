@@ -1,5 +1,5 @@
 window.TrelloPowerUp.initialize({
-  appKey: 'TRELLO_APP_KEY', // Get from https://trello.com/app-key
+  appKey: 'ATTA354f5baef3021fc089cbb3da8e0039e64d0aec567d1c98f34afadf916df95548627D98F5', // Get from https://trello.com/app-key
   appName: 'Habitica Sync',
 
   'card-buttons': (t) => [{
@@ -21,7 +21,7 @@ async function triggerGitHubSync(card) {
     {
       method: 'POST',
       headers: {
-        Authorization: `Bearer YOUR_GITHUB_PAT`, // Fine-grained PAT with "workflow" scope
+        Authorization: `Bearer ${await t.loadSecret('GH_PAT')}`, // Fine-grained PAT with "workflow" scope
         Accept: 'application/vnd.github.everest-preview+json',
       },
       body: JSON.stringify({
