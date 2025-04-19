@@ -1,0 +1,12 @@
+<html><body>
+<h3>Enter your Habitica API Token</h3>
+<input id="apiKey"><input id="userId"><button onclick="save()">Save</button>
+<script src="https://p.trellocdn.com/power-up.min.js"></script>
+<script>
+  const t = TrelloPowerUp.iframe();
+  function save() {
+    t.set('member', 'private', 'habiticaApiToken', document.getElementById('apiKey').value);
+    t.set('member', 'private', 'habiticaUserId', document.getElementById('userId').value);
+    t.closePopup();
+  }
+</script></body></html>
