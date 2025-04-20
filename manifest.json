@@ -1,14 +1,14 @@
 {
   "name": "Habitica Sync",
   "description": "Sync Trello cards to Habitica using GitHub Actions.",
-  "author": "Your Name",
+  "author": "Jose Guzman",
   "capabilities": ["card-buttons"],
   "icon": {
     "url": "https://habitica.com/favicon.ico"
   },
   "connectors": {
     "iframe": {
-      "url": "index.html"
+      "url": "https://bunny-burrow.github.io/Habitica-Trello/index.html"
     }
   }
 }
