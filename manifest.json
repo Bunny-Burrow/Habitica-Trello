@@ -8,7 +8,7 @@
   },
   "connectors": {
     "iframe": {
-      "url": "index.html"
+      "url": "https://bunny-burrow.github.io/Habitica-Trello/index.html"
     }
   }
 }
