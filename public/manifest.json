@@ -1,0 +1,28 @@
+{
+  "name": "Habitica Sync",
+  "description": "Sync Trello cards with Habitica tasks",
+  "permissions": ["card-buttons"],
+  "author": "Your Name or Org",
+  "icon": {
+    "url": "https://your-vercel-app.vercel.app/icon.png",
+    "width": 64,
+    "height": 64
+  },
+  "capabilities": {
+    "card-buttons": [
+      {
+        "text": "Sync to Habitica",
+        "callback": "cardButtonCallback",
+        "condition": "edit"
+      }
+    ]
+  },
+  "connectors": {
+    "iframe": {
+      "url": "https://your-vercel-app.vercel.app/"
+    }
+  },
+  "api": {
+    "version": 1
+  }
+}
