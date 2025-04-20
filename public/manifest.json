@@ -1,16 +1,14 @@
 {
-  "id": "habitica-sync-powerup",
   "name": "Habitica Sync",
-  "author": "Jose Guzman",
-  "description": "Sync Trello cards to Habitica tasks",
-  "version": "1.0",
-  "detailsUrl": "https://Bunny-Burrow.github.io/Habitica-Trello/",
-  "icon": "https://habitica.com/favicon.ico",
+  "description": "Sync Trello cards to Habitica using GitHub Actions.",
+  "author": "Your Name",
   "capabilities": ["card-buttons"],
+  "icon": {
+    "url": "https://habitica.com/favicon.ico"
+  },
   "connectors": {
     "iframe": {
-      "url": "./index.html"
+      "url": "index.html"
     }
-  },
-  "scopes": ["read", "write"]
+  }
 }

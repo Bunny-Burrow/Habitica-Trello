@@ -1,35 +1,30 @@
-window.TrelloPowerUp.initialize({
-  appKey: 'YOUR_TRELLO_APP_KEY', // Replace with your key
-  appName: 'Habitica Sync',
+const t = TrelloPowerUp.iframe();
 
-  'card-buttons': (t) => [{
-    icon: 'https://habitica.com/favicon.ico',
-    text: 'Sync to Habitica',
-    callback: async (t) => {
-      const card = await t.card('name', 'desc', 'id');
-      const response = await fetch(
-        'https://api.github.com/repos/YOUR_USER/YOUR_REPO/dispatches',
-        {
+window.TrelloPowerUp.initialize({
+  'card-buttons': function (t, options) {
+    return [{
+      icon: 'https://habitica.com/favicon.ico',
+      text: 'Sync to Habitica',
+      callback: async (t) => {
+        const card = await t.card('name', 'desc', 'url', 'idList');
+        const lists = await t.lists('id', 'name');
+        const list = lists.find(l => l.id === card.idList);
+
+        await fetch('https://your-glitch-project.glitch.me/sync', {
           method: 'POST',
           headers: {
-            Authorization: `Bearer ${await t.loadSecret('github-pat')}`,
-            Accept: 'application/vnd.github.everest-preview+json'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            event_type: 'trello-to-habitica-sync',
-            client_payload: {
-              card_id: card.id,
-              card_name: card.name,
-              card_desc: card.desc
-            }
+            cardName: card.name,
+            cardDesc: card.desc,
+            cardURL: card.url,
+            listName: list?.name || ''
           })
-        }
-      );
-      if (response.ok) {
-        t.closePopup().then(() => {
-          t.alert({ message: 'Synced to Habitica!' });
         });
+
+        return t.alert({ message: 'Sync sent to Habitica!' });
       }
-    } // Close callback
-  }] // Close array
-}); // Close initialize
+    }];
+  }
+});
