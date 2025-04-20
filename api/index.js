@@ -7,7 +7,7 @@ export default function handler(req, res) {
     capabilities: ["card-buttons"],
     connectors: {
       iframe: {
-        url: "/public/index.html"
+        url: "/index.html"
       }
     }
   });

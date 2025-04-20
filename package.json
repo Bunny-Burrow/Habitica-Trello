@@ -1,7 +1,6 @@
 {
-  "name": "habitica-trello-powerup",
+  "name": "habitica-trello-vercel",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vercel dev",
     "start": "vercel dev"
