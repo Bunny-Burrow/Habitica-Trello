@@ -1,10 +1,9 @@
 {
   "name": "Habitica Sync",
-  "description": "Sync Trello cards with Habitica tasks",
-  "permissions": ["card-buttons"],
-  "author": "Your Name or Org",
+  "description": "Sync Trello cards as Habitica tasks securely via API.",
+  "author": "Your Name or Organization",
   "icon": {
-    "url": "https://your-vercel-app.vercel.app/icon.png",
+    "url": "https://habitica-trello.vercel.app/icon.png",
     "width": 64,
     "height": 64
   },
@@ -19,9 +18,10 @@
   },
   "connectors": {
     "iframe": {
-      "url": "https://your-vercel-app.vercel.app/"
+      "url": "https://habitica-trello.vercel.app/index.html"
     }
   },
+  "permissions": ["card-buttons"],
   "api": {
     "version": 1
   }
