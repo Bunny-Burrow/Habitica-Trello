@@ -10,7 +10,7 @@ window.TrelloPowerUp.initialize({
         const lists = await t.lists('id', 'name');
         const list = lists.find(l => l.id === card.idList);
 
-        await fetch('https://your-glitch-project.glitch.me/sync', {
+        await fetch('https://habitica-trello-sync.glitch.me/sync', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
