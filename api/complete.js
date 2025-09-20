@@ -14,6 +14,7 @@ export default async function handler(req, res) {
         headers: {
           'x-api-user': userId,
           'x-api-key': apiToken,
+	  'x-client': `${userId}-Habitica-Trello`,
           'Content-Type': 'application/json'
         }
       });
@@ -25,7 +26,8 @@ export default async function handler(req, res) {
     const allTasks = await fetch('https://habitica.com/api/v3/tasks/user?type=todo', {
       headers: {
         'x-api-user': userId,
-        'x-api-key': apiToken
+        'x-api-key': apiToken,
+	'x-client': `${userId}-Habitica-Trello`
       }
     });
 
@@ -46,6 +48,7 @@ export default async function handler(req, res) {
       headers: {
         'x-api-user': userId,
         'x-api-key': apiToken,
+        'x-client': `${userId}-Habitica-Trello`,
         'Content-Type': 'application/json'
       }
     });

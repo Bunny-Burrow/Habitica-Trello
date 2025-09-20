@@ -11,7 +11,8 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'x-api-user': process.env.HABITICA_USER_ID,
-        'x-api-key': process.env.HABITICA_API_TOKEN
+        'x-api-key': process.env.HABITICA_API_TOKEN,
+	'x-client': `${process.env.HABITICA_USER_ID}-Habitica-Trello`
       },
       body: JSON.stringify({
         type: 'todo',
